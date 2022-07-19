@@ -3,4 +3,6 @@ export interface Enum {
     value: string;
     type: string;
     description: string | null;
+    label: string | null;
+    detaileddescription: string | null;
 }

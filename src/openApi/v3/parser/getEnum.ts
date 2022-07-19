@@ -16,6 +16,8 @@ export const getEnum = (values?: (string | number)[]): Enum[] => {
                         value: String(value),
                         type: 'number',
                         description: null,
+                        label: null,
+                        detaileddescription: null,
                     };
                 }
                 return {
@@ -27,6 +29,8 @@ export const getEnum = (values?: (string | number)[]): Enum[] => {
                     value: `'${value.replace(/'/g, "\\'")}'`,
                     type: 'string',
                     description: null,
+                    label: null,
+                    detaileddescription: null,
                 };
             });
     }

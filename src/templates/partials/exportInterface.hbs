@@ -40,6 +40,34 @@ export namespace {{{name}}} {
 		{{/each}}
 	}
 
+	export const {{{name}}}Values = [
+		{{#each enum}}
+		{{#containsSpaces value}}
+		`{{{value}}}`,
+		{{else}}
+		{{{value}}},
+		{{/containsSpaces}}
+		{{/each}}
+	]
+
+	export const {{{name}}}Labels = [
+		{{#each enum}}
+		`{{{label}}}`,
+		{{/each}}
+	]
+
+	export const {{{name}}}Descriptions = [
+		{{#each enum}}
+		`{{#if description}}{{{escapeDescription description}}}{{/if}}`,
+		{{/each}}
+	]
+
+	export const {{{name}}}DetailedDescriptions = [
+		{{#each enum}}
+		`{{#if detaileddescription}}{{{escapeDescription detaileddescription}}}{{/if}}`,
+		{{/each}}
+	]
+
 	{{/each}}
 
 }
